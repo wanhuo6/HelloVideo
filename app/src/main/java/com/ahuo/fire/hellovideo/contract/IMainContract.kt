@@ -11,9 +11,14 @@ interface IMainContract {
 
     interface IMainPresenter {
         fun getData()
+
+        fun wxLogin()
+
     }
 
     interface IMainViewI : IBaseMvpView {
         fun getDataSuccess()
+
+        fun loginFail(message:String)
     }
 }
