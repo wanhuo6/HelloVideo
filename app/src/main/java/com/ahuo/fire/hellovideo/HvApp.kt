@@ -17,7 +17,7 @@ class HvApp : Application() {
     override fun onCreate() {
         super.onCreate()
         instance = this
-        MLog.init(BuildConfig.KK_LOG, AppConfig.APP_LOG_TAG)
+        MLog.init(true, AppConfig.APP_LOG_TAG)
         PreferencesUtils.init(this)
         ToastUtils.init(this)
     }

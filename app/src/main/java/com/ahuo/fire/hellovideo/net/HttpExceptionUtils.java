@@ -42,19 +42,19 @@ public class HttpExceptionUtils {
                 case BAD_GATEWAY:
                 case SERVICE_UNAVAILABLE:
                 default:
-                    ex = HvApp.getInstance().getString(R.string.http_hint_net_protocol_error);  //均视为网络错误
+                    ex = HvApp.Companion.getInstance().getString(R.string.http_hint_net_protocol_error);  //均视为网络错误
                     break;
             }
             return ex;
         } else if (e instanceof JSONException
                 || e instanceof ParseException) {
-            ex = HvApp.getInstance().getString(R.string.error_parse_data_error);            //均视为解析错误
+            ex = HvApp.Companion.getInstance().getString(R.string.error_parse_data_error);            //均视为解析错误
             return ex;
         } else if (e instanceof ConnectException) {
-            ex = HvApp.getInstance().getString(R.string.public_net_connect_error);  //均视为网络错误
+            ex = HvApp.Companion.getInstance().getString(R.string.public_net_connect_error);  //均视为网络错误
             return ex;
         } else {
-            ex = HvApp.getInstance().getString(R.string.error_un_know);          //未知错误
+            ex = HvApp.Companion.getInstance().getString(R.string.error_un_know);          //未知错误
             return ex;
         }
     }

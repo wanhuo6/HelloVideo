@@ -27,7 +27,7 @@ public class CommonInterceptor implements Interceptor {
         Request originalRequest = chain.request();
         Request.Builder newBuilder = originalRequest.newBuilder();
         Request compressedRequest;
-        if (!NetWorkUtils.isNetConnect(HvApp.getInstance())) {
+        if (!NetWorkUtils.isNetConnect(HvApp.Companion.getInstance())) {
             newBuilder.cacheControl(CacheControl.FORCE_CACHE);//从缓存中读取
         } else {
             newBuilder.cacheControl(CacheControl.FORCE_NETWORK);
@@ -41,7 +41,7 @@ public class CommonInterceptor implements Interceptor {
 
         printRequest(originalRequest);
 
-        if (NetWorkUtils.isNetConnect(HvApp.getInstance())) {
+        if (NetWorkUtils.isNetConnect(HvApp.Companion.getInstance())) {
             int maxAge = 60 * 60; // 有网络时 设置缓存超时时间一小时
             response = response.newBuilder()
                     .removeHeader("Pragma")

@@ -25,7 +25,7 @@ public class HttpClientBuilder {
     public static OkHttpClient build(){
         if(mClient == null){
             mClient = new OkHttpClient.Builder()
-                    .cache(new Cache(new File(HvApp.getInstance().getExternalCacheDir(), "http_cache"), 1024 * 1024 * 100))
+                    .cache(new Cache(new File(HvApp.Companion.getInstance().getExternalCacheDir(), "http_cache"), 1024 * 1024 * 100))
                     .connectTimeout(TIMEOUT_CONNECT, TimeUnit.SECONDS)
                     .readTimeout(TIMEOUT_READ, TimeUnit.SECONDS)
                     .writeTimeout(TIMEOUT_WRITE, TimeUnit.SECONDS)

@@ -24,18 +24,12 @@ android {
     }
     buildTypes {
         release {
-            buildConfigField("boolean", "KK_LOG", "false")
-            buildConfigField("String", "API_HOST", "\"http:192.168.40.88/hv\"")
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.config
         }
         debug {
-            buildConfigField("boolean", "KK_LOG", "false")
-            buildConfigField("String", "API_HOST", "\"http:192.168.40.88/hv\"")
             debuggable true
-            jniDebuggable true
-            renderscriptDebuggable true
             minifyEnabled false
             signingConfig signingConfigs.config
         }
@@ -46,6 +40,7 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:26.+'
+    implementation 'com.android.support:design:26.+'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'

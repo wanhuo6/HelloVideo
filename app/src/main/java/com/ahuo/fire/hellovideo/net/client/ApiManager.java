@@ -2,6 +2,7 @@ package com.ahuo.fire.hellovideo.net.client;
 
 
 import com.ahuo.fire.hellovideo.BuildConfig;
+import com.ahuo.fire.hellovideo.core.AppConfig;
 
 /**
  * Created on 17-8-1
@@ -28,7 +29,7 @@ public class ApiManager {
 
     public ApiService getApiService(){
         if (mApiService==null){
-            mApiService= RetrofitManager.build(BuildConfig.API_HOST).create(ApiService.class);
+            mApiService= RetrofitManager.build(AppConfig.Companion.getAPI_HOST()).create(ApiService.class);
         }
         return mApiService;
     }
