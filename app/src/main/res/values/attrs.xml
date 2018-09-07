@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ViewPagerIndicator">
+        <attr name="visibleTabCount" format="integer"/>
+        <attr name="tabBottomStyle" format="enum">
+            <enum name="rect" value="0"/>
+            <enum name="trianglePositive" value="1"/>
+            <enum name="triangleNagetive" value="2"/>
+            <enum name="trianglePositiveWithRect" value="3"/>
+        </attr>
+        <attr name="tabBackgroundDefaultColor" format="reference|color"/>
+        <attr name="tabIndicatorBackgroundColor" format="reference|color"/>
+        <attr name="tabIndicatorDefaultColor" format="reference|color"/>
+        <attr name="tabBackgroundHighlightColor" format="reference|color"/>
+        <attr name="tabTextDefaultColor" format="reference|color"/>
+        <attr name="tabTextHighlightColor" format="reference|color"/>
+    </declare-styleable>
+</resources>

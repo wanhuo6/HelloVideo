@@ -13,6 +13,7 @@ import com.ahuo.tools.util.ToastUtils
 import kotlinx.android.synthetic.main.activity_main.*
 import android.R.attr.button
 import android.animation.Animator
+import android.content.Intent
 import android.os.Build
 import android.os.Handler
 import android.support.annotation.RequiresApi
@@ -76,7 +77,9 @@ class MainActivity : BaseMvpActivity<IMainContract.IMainViewI, MainPresenter>(),
                 animator!!.duration = 700
                 animator!!.start()
                 rl_parent.background.mutate().alpha = 0
+                startActivity(Intent(this, TestActivity::class.java))
             }, 1000)
+
 
         }
 

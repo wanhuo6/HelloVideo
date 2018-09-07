@@ -1,15 +1,15 @@
 package com.ahuo.fire.hellovideo.ui.load;
 
-import android.app.Activity;
+import android.content.Context;
 
 public class FlameParam {
-    public final Activity activity;
+    public final Context context;
     public int type;
     public String tip;
     public String confirm;
     public String cancel;
 
-    public FlameParam(Activity act) {
-        activity=act;
+    public FlameParam(Context act) {
+        context=act;
     }
 }
